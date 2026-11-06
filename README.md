@@ -92,8 +92,8 @@ On the large GPU machine:
 
 ```bash
 python compare_viraminer3_cnn_transformers_trial2.py \
-  --data-path /home/fusaro/viraminer/dataset \
-  --save-dir /home/fusaro/viraminer/cnn_transformer_variants_trial2 \
+  --data-path /path/to/dataset \
+  --save-dir /path/to/save_dir \
   --epochs 120 \
   --batch-size 128 \
   --device cuda
@@ -106,8 +106,8 @@ To resume interrupted runs:
 
 ```bash
 python compare_viraminer3_cnn_transformers_trial2.py \
-  --data-path /home/fusaro/viraminer/dataset \
-  --save-dir /home/fusaro/viraminer/cnn_transformer_variants_trial2 \
+  --data-path /path/to/dataset \
+  --save-dir /path/to/save_dir \
   --epochs 120 \
   --batch-size 128 \
   --device cuda \
@@ -119,8 +119,8 @@ To run only selected variants:
 ```bash
 python compare_viraminer3_cnn_transformers_trial2.py \
   --variants current-cnn-transformer,cls-plus-attention-pooling \
-  --data-path /home/fusaro/viraminer/dataset \
-  --save-dir /home/fusaro/viraminer/cnn_transformer_variants_trial2 \
+  --data-path /path/to/dataset \
+  --save-dir /path/to/save_dir \
   --device cuda
 ```
 
@@ -135,13 +135,7 @@ The main output directory contains:
 | `variant_comparison.png` | Bar/scatter plots comparing variants |
 | `validation_learning_curves.png` | Validation AUROC curves across epochs |
 
-Each variant also gets its own folder, for example:
-
-```text
-/home/fusaro/viraminer/cnn_transformer_variants_trial2/current-cnn-transformer/
-```
-
-Inside each variant folder:
+Each variant also gets its own folder, inside each variant folder:
 
 | File | Meaning |
 |---|---|
