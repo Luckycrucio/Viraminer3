@@ -1,12 +1,12 @@
-# ViraMiner3 CNN–Transformer comparison — trial 2
+# ViraMiner3 CNN–Transformer comparison 
 
-This is the second large-model comparison script for the ViraMiner-style
-CNN–Transformer experiments. It keeps the same training protocol as the first
+This is a large-model comparison of CNN–Transformer experiments. 
+It keeps the same training protocol as the viraminer
 comparison: reverse-complement/shift augmentation, focal loss, AdamW, warm-up +
 cosine scheduling, Transformer freezing during warm-up, early stopping on
 validation AUROC, and final test evaluation from the best validation checkpoint.
 
-This second trial focuses on a sharper question:
+This focuses on a sharper question:
 
 > Can we improve the baseline by changing the CNN motif encoder or the final
 > token aggregation, rather than simply adding generic capacity?
